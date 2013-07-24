@@ -6,11 +6,8 @@ block content
 
   div
     table(border='1')
-      //- each row in rows
-        //tr
-          //- each col in row
-            //td #{col}
-
-  p= row.szaccountname
-  p= szaccountname
+      - each row in rows
+        tr
+          - each col in row
+            td #{col}
             
