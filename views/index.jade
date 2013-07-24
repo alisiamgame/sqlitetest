@@ -3,3 +3,14 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+
+  div
+    table(border='1')
+      //- each row in rows
+        //tr
+          //- each col in row
+            //td #{col}
+
+  p= row.szaccountname
+  p= szaccountname
+            

@@ -7,9 +7,28 @@ var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , sqlite3 = require('sqlite3').verbose();
 
 var app = express();
+
+/*
+var db = new sqlite3.Database('../../sqlitedata/Log_20130723.log');
+
+db.serialize(function() {
+	db.each("select * from log_pc", function(err, row) {
+		console.log(row);
+	});
+});
+
+db.serialize(function() {
+	db.each("select * from log_pc", function(err, row) {
+		console.log(row.action_id);
+	});
+});
+
+db.close();
+*/
 
 // all environments
 app.set('port', process.env.PORT || 3000);
