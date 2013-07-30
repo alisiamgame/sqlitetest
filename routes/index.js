@@ -4,7 +4,7 @@ var Iconv = require('iconv').Iconv;
 var Buffer = require('buffer').Buffer;
 
 exports.index = function(req, res){
-	var db = new sqlite3.Database('../../sqlitedata/Log_20130728_utf8.log');
+	var db = new sqlite3.Database('./Log_20130723_utf8.log');
 
 	db.serialize(function() {
 
